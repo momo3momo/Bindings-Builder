@@ -29,7 +29,7 @@ let responsibilities = [
         matrix: "pi-hosted",
         platform: "linux",
         arch: ["arm64"]
-    } 
+    }
 ];
 
 async function build(matrix, token, email) {
@@ -38,7 +38,7 @@ async function build(matrix, token, email) {
     let codeVersions = pkg.codeVersions;
 
     let repoFolder = path.resolve(path.join("..", "..", "Pico-Go"));
-    let git = new Git("https://github.com/cpwood/Pico-Go.git", "cpwood", token, repoFolder, "Chris Wood", email);
+    let git = new Git("https://github.com/NixM0nk3y/Pico-Go.git", "NixM0nk3y", token, repoFolder, "Nick Gregory", email);
 
     await git.clone();
     await git.checkout("develop");
@@ -49,13 +49,13 @@ async function build(matrix, token, email) {
 
     let minModules = _.minBy(codeVersions, x => x.modules).modules;
     let maxModules = _.maxBy(codeVersions, x => x.modules).modules;
-    
+
     let platformResponsibilities = _.find(responsibilities, x => x.matrix == matrix);
     let modulesVersion = CodeVersion.getProcessingVersions(codeVersions);
     let rebuild = new Rebuild();
 
-    for(let arch of platformResponsibilities.arch) {
-        for(let x of modulesVersion) {
+    for (let arch of platformResponsibilities.arch) {
+        for (let x of modulesVersion) {
             let spRemoved = nm.removeOtherSerialportVersions(platform, arch, serialport);
             let modRemoved = nm.removeOtherModulesVersions(platform, arch, minModules, maxModules);
 
@@ -71,7 +71,7 @@ async function build(matrix, token, email) {
 
             if (!nm.exists(x)) {
                 // NB: following line will fail when run in debug.
-                let builtFolder = await rebuild.rebuildPlatform(x);     
+                let builtFolder = await rebuild.rebuildPlatform(x);
                 // For debugging only
                 //let builtFolder = path.resolve(path.join("node_modules", "@serialport", "bindings", "bin", `${x.platform}-${x.arch}-${x.modules}`));
 
@@ -93,6 +93,6 @@ async function build(matrix, token, email) {
 
 let args = process.argv.slice(2);
 
-build(args[0], args[1], args[2]).then(function() {
+build(args[0], args[1], args[2]).then(function () {
     console.log("All done!");
 });
