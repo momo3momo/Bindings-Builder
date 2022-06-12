@@ -5,8 +5,8 @@
     "main": "index.js",
     "codeVersions": [
         {
-            "code": "1.66.2",
-            "electron": "17.2.0",
+            "code": "1.68.0",
+            "electron": "17.4.7",
             "modules": 101
         },
         {
