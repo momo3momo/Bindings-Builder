@@ -24,11 +24,11 @@ let responsibilities = [
         matrix: "ubuntu-latest",
         platform: "linux",
         arch: ["x64"]
-    },
-    {
-        matrix: "pi-hosted",
-        platform: "linux",
-        arch: ["arm64"]
+    //},
+    //{
+    //    matrix: "pi-hosted",
+    //    platform: "linux",
+    //    arch: ["arm64"]
     }
 ];
 
@@ -38,7 +38,7 @@ async function build(matrix, token, email) {
     let codeVersions = pkg.codeVersions;
 
     let repoFolder = path.resolve(path.join("..", "..", "Pico-Go"));
-    let git = new Git("https://github.com/NixM0nk3y/Pico-Go.git", "NixM0nk3y", token, repoFolder, "Nick Gregory", email);
+    let git = new Git("https://github.com/momo3momo/Pico-Go.git", "momo3momo", token, repoFolder, "momo3momo", email);
 
     await git.clone();
     await git.checkout("develop");
