@@ -5,14 +5,14 @@
     "main": "index.js",
     "codeVersions": [
         {
-          "code": "1.71.0",
-          "electron": "19.0.12",
-          "modules": 106
+            "code": "1.71.0",
+            "electron": "19.0.12",
+            "modules": 106
         },
         {
-          "code": "1.69.0",
-          "electron": "18.3.5",
-          "modules": 103
+            "code": "1.69.0",
+            "electron": "18.3.5",
+            "modules": 103
         },
         {
             "code": "1.68.0",
