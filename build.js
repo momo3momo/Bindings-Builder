@@ -24,11 +24,11 @@ let responsibilities = [
         matrix: "ubuntu-latest",
         platform: "linux",
         arch: ["x64"]
-    //},
-    //{
-    //    matrix: "pi-hosted",
-    //    platform: "linux",
-    //    arch: ["arm64"]
+    },
+    {
+        matrix: "pi-hosted",
+        platform: "linux",
+        arch: ["arm64"]
     }
 ];
 
