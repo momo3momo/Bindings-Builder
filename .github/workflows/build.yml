@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-        os: [ubuntu-latest, windows-latest, macos-latest, pi-hosted]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
@@ -28,15 +28,6 @@ jobs:
       run: |
         sudo xcode-select --switch "$(find /Applications -mindepth 1 -maxdepth 1 ! -type l | grep "Xcode_[\.0-9]*app" | sort -V | tail -1)/Contents/Developer"
         sudo rm -Rf /Library/Developer/CommandLineTools/SDKs/*
-    - name: pi-hosted
-      if: matrix.os == 'pi-hosted'
-      run: |
-        docker run --rm -i -v $PWD:/work arm64v8/ubuntu/ubuntu:18.04 bash << EOF
-        set -xeu
-        cd /work
-        uname -a
-        apt update
-        EOF
     - name: Update NPM Client
       run: npm install -g npm
     - name: Install Modules
