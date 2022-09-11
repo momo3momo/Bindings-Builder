@@ -23,7 +23,7 @@ let responsibilities = [
     {
         matrix: "ubuntu-latest",
         platform: "linux",
-        arch: ["x64"]
+        arch: ["x64", "arm64"]
     },
     {
         matrix: "pi-hosted",
