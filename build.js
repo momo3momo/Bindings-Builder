@@ -14,16 +14,16 @@ let responsibilities = [
         matrix: "windows-latest",
         platform: "win32",
         arch: ["x64"]
-    },
-    {
-        matrix: "macos-latest",
-        platform: "darwin",
-        arch: ["x64", "arm64"]
-    },
-    {
-        matrix: "ubuntu-latest",
-        platform: "linux",
-        arch: ["x64", "arm64"]
+    //},
+    //{
+    //    matrix: "macos-latest",
+    //    platform: "darwin",
+    //    arch: ["x64", "arm64"]
+    //},
+    //{
+    //    matrix: "ubuntu-latest",
+    //    platform: "linux",
+    //    arch: ["x64", "arm64"]
     }
 ];
 
