@@ -6,7 +6,7 @@
     "codeVersions": [
         {
             "code": "1.78.0",
-            "electron": "22.3.5",
+            "electron": "22.5.2",
             "modules": 110
         },
         {
