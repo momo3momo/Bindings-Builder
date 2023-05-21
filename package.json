@@ -44,7 +44,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "electron-rebuild": "3.2.13",
+        "electron-rebuild": "3.2.12",
         "lodash": "^4.17.21",
         "node-abi": "3.40.0",
         "semver": "^7.3.5",
