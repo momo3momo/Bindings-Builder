@@ -24,7 +24,8 @@ class Rebuild {
 
         console.log("Finished building bindings!");
 
-        return path.resolve(path.join("node_modules", "@serialport", "bindings", "bin", `${codeVersion.platform}-${codeVersion.arch}-${codeVersion.modules}`));
+        //return path.resolve(path.join("node_modules", "@serialport", "bindings", "bin", `${codeVersion.platform}-${codeVersion.arch}-${codeVersion.modules}`));
+        return path.resolve(path.join("node_modules", "@serialport", "bindings", "build","Release"));
     }
 }
 
