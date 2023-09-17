@@ -26,7 +26,7 @@ class Rebuild {
 
         //return path.resolve(path.join("node_modules", "@serialport", "bindings", "bin", `${codeVersion.platform}-${codeVersion.arch}-${codeVersion.modules}`));
         //return path.resolve(path.join("node_modules", "@serialport", "bindings", "build","Release"));
-        if (codeVersion.platform == "linux64")
+        if (codeVersion.platform == "linux x64")
             return path.resolve(path.join("node_modules", "@serialport", "bindings-cpp","build"));
         else
             return path.resolve(path.join("node_modules", "@serialport", "bindings", "build","Release"));
