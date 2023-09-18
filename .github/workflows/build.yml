@@ -29,7 +29,9 @@ jobs:
         sudo xcode-select --switch "$(find /Applications -mindepth 1 -maxdepth 1 ! -type l | grep "Xcode_[\.0-9]*app" | sort -V | tail -1)/Contents/Developer"
         sudo rm -Rf /Library/Developer/CommandLineTools/SDKs/*
     - name: Update NPM Client
-      run: npm install -g npm
+      run: npm install -g npm@10
+    - name:  electron/rebuild Install
+      run: npm install -save-dev @electron/rebuild
     - name: Install Modules
       run: npm install
     - name: Rebuild serialport and Commit
