@@ -72,4 +72,4 @@ The information for `package.json` can be determined as follows:
 
    The Electron version is the `target` value. The Insider build is on the `master` branch and other RTM versions are tagged.
 
-2. Look up the `modules` version at the [Electron Releases repo](https://github.com/electron/releases)'s [`lite.json`](https://github.com/electron/releases/blob/master/lite.json) file.
+2. Look up the `modules` version at the [Electron Releases](https://releases.electronjs.org/)'s [`releases.json`](https://releases.electronjs.org/releases.json) file.
