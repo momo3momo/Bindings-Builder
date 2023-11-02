@@ -15,7 +15,7 @@ class Git {
     async clone() {
         // Delete an existing source folder and make a new one
         if (fs.existsSync(this._repoFolder))
-        fs.rmdirSync(this._repoFolder, {
+        fs.rmSync(this._repoFolder, {
             recursive: true,
             force: true
         });
