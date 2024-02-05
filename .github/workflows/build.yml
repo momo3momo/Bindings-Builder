@@ -17,12 +17,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     # https://github.com/nodejs/node-gyp/issues/1663#issuecomment-535049449
-    - name: Patch node gyp on Windows to support Visual Studio 2019
-      if: matrix.os == 'windows-latest'
-      shell: powershell
-      run: |
-        npm install --global node-gyp@latest
-        npm prefix -g | % {npm config set node_gyp "$_\node_modules\node-gyp\bin\node-gyp.js"}
+    ##- name: Patch node gyp on Windows to support Visual Studio 2019
+    ##  if: matrix.os == 'windows-latest'
+    ##  shell: powershell
+    ##  run: |
+    ##    npm install --global node-gyp@latest
+    ##    npm prefix -g | % {npm config set node_gyp "$_\node_modules\node-gyp\bin\node-gyp.js"}
     - name: Ensure latest macOS SDK is used
       if: matrix.os == 'macos-latest'
       shell: zsh {0}
