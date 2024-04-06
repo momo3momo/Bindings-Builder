@@ -5,6 +5,11 @@
     "main": "index.js",
     "codeVersions": [
         {
+            "code": "1.88.0",
+            "electron": "28.2.8",
+            "modules": 119
+        },
+        {
             "code": "1.86.0",
             "electron": "27.2.3",
             "modules": 118
@@ -23,16 +28,6 @@
             "code": "1.71.0",
             "electron": "19.0.12",
             "modules": 106
-        },
-        {
-            "code": "1.69.0",
-            "electron": "18.3.5",
-            "modules": 103
-        },
-        {
-            "code": "1.68.0",
-            "electron": "17.4.7",
-            "modules": 101
         }
     ],
     "scripts": {},
